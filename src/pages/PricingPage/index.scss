@@ -1,5 +1,11 @@
 @use '../../App.scss' as colors;
 
+@media screen and (min-width: 1920px) {
+  #pricing {
+    min-height: 75vh;
+  }
+}
+
 #pricing {
   min-height: 115vh;
   position: relative;
@@ -40,12 +46,6 @@
       align-items: center;
       justify-content: space-between;
     }
-  }
-}
-
-@media screen and (min-width: 1920px) {
-  #pricing {
-    min-height: 75vh;
   }
 }
 

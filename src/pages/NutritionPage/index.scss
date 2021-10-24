@@ -1,5 +1,11 @@
 @use '../../App.scss' as colors;
 
+@media screen and (min-width: 1920px) {
+  #nutrition {
+    min-height: 55vh;
+  }
+}
+
 #nutrition {
   min-height: 70vh;
   display: grid;
@@ -100,12 +106,6 @@
       border: none;
       border-radius: 1.75rem;
     }
-  }
-}
-
-@media screen and (min-width: 1920px) {
-  #nutrition {
-    min-height: 55vh;
   }
 }
 

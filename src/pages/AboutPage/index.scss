@@ -1,10 +1,18 @@
+@use '../../App.scss' as colors;
+
+@media screen and (min-width: 1920px) {
+  #about {
+    min-height: 55vh;
+  }
+}
+
 #about {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-
+  color: colors.$black;
   .headingContainer {
     text-align: center;
     position: relative;
@@ -73,12 +81,6 @@
     grid-template-columns: 1fr 1fr;
     grid-gap: 2rem;
     row-gap: 2rem;
-  }
-}
-
-@media screen and (min-width: 1920px) {
-  #about {
-    min-height: 55vh;
   }
 }
 

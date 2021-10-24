@@ -1,5 +1,11 @@
 @use '../../App.scss' as colors;
 
+@media screen and (min-width: 1920px) {
+  #home {
+    min-height: 55vh;
+  }
+}
+
 #home {
   display: flex;
   align-items: center;
@@ -16,8 +22,7 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: #181517;
-    opacity: 80%;
+    background-color: rgba(0, 0, 0, 0.75);
   }
 
   .heroSection {
@@ -68,12 +73,6 @@
         font-weight: 500;
       }
     }
-  }
-}
-
-@media screen and (min-width: 1920px) {
-  #home {
-    min-height: 55vh;
   }
 }
 
