@@ -1,0 +1,35 @@
+// slick carousel
+
+.slick-next {
+  right: -3.7rem !important;
+}
+
+.slick-prev {
+  left: -3.7rem !important;
+}
+
+.slick-prev,
+.slick-next {
+  width: 35px !important;
+  height: 35px !important;
+}
+
+@media screen and (max-width: 1024px) {
+  .slick-next {
+    right: -2rem !important;
+  }
+
+  .slick-prev {
+    left: -2rem !important;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .slick-next {
+    right: -0.8rem !important;
+  }
+
+  .slick-prev {
+    left: -0.8rem !important;
+  }
+}

@@ -1,0 +1,40 @@
+.menu {
+  display: inline-flex;
+  .menuIcon {
+    width: 70px;
+    height: 70px;
+    margin-right: 1.8rem;
+  }
+
+  .menuContent {
+    .menuName {
+      font-weight: 600;
+      font-size: 1.7rem;
+      padding-bottom: 5px;
+      text-transform: capitalize;
+    }
+    .menuDetails {
+      font-weight: 300;
+      font-size: 1rem;
+      text-transform: capitalize;
+      line-height: 1.8rem;
+    }
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .menu {
+    .menuIcon {
+      width: 60px;
+      height: 60px;
+    }
+    .menuContent {
+      .menuName {
+        font-size: 1.4rem;
+      }
+      .menuDetails {
+        font-size: 0.9rem;
+      }
+    }
+  }
+}

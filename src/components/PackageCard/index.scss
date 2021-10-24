@@ -1,0 +1,126 @@
+@use '../../App.scss' as colors;
+.packageCard {
+  padding: 1.8rem 0;
+  min-height: auto;
+  width: 350px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: colors.$black;
+  background-color: colors.$white;
+  border: none;
+  border-radius: 2.1rem;
+  box-shadow: 0px 16px 35px rgba(112, 144, 176, 0.2);
+  position: relative;
+  overflow: hidden;
+
+  .bestTag {
+    position: absolute;
+    right: 0;
+    top: 0;
+    font-weight: 600;
+    font-size: 0.8rem;
+    background-color: #63c776;
+    width: 76px;
+    height: 76px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0 2.1rem;
+    color: colors.$white;
+  }
+  .packageLevel {
+    font-weight: 600;
+    font-size: 1.8rem;
+    padding-bottom: 10px;
+  }
+
+  .packageVisual {
+    padding-bottom: 10px;
+  }
+  .packageName {
+    font-weight: 400;
+    font-size: 1.2rem;
+    padding-bottom: 10px;
+  }
+
+  .packageFacilities {
+    padding-bottom: 3.1rem;
+    min-height: 265px;
+    .facility {
+      display: flex;
+      align-items: center;
+      padding-bottom: 10px;
+      font-weight: 300;
+      font-size: 1.1rem;
+      .icon {
+        padding-right: 10px;
+        height: 100%;
+      }
+    }
+  }
+
+  .packagePrice {
+    font-weight: 600;
+    font-size: 2rem;
+    padding-bottom: 2rem;
+
+    span {
+      font-weight: 300;
+      font-size: 1.2rem;
+    }
+  }
+
+  .packageBtn {
+    padding: 0.9rem 1.2rem;
+    background-color: colors.$black;
+    border: none;
+    border-radius: 1.7rem;
+    color: colors.$white;
+    font-size: 1.1rem;
+    font-weight: 500;
+
+    &:hover {
+      color: colors.$primary;
+    }
+  }
+}
+@media screen and (max-width: 1024px) {
+  .packageCard {
+    width: 280px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .packageCard {
+    width: 350px;
+    margin-bottom: 2rem;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .packageCard {
+    width: 95%;
+  }
+}
+
+@media screen and (max-width: 350px) {
+  .packageCard {
+    .bestTag {
+      font-size: 70%;
+      width: 65px;
+      height: 65px;
+    }
+    .packageLevel {
+      font-size: 100%;
+    }
+    .packageFacilities {
+      .facility {
+        font-size: 100%;
+      }
+    }
+    .packagePrice {
+      font-size: 100%;
+    }
+  }
+}

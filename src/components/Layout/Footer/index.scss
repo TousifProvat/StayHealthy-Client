@@ -1,0 +1,91 @@
+#footer {
+  display: flex;
+  flex-direction: column;
+  border-top: 1px solid #e5e5e5;
+  margin-top: 2.5rem;
+  .footerContainer {
+    padding: 2.9rem 0;
+    display: flex;
+    justify-content: space-between;
+
+    .footerAbout {
+      .brand {
+        font-weight: 800;
+        font-size: 1.5rem;
+        padding-bottom: 5px;
+      }
+      .aboutus {
+        font-weight: 300;
+        font-size: 0.9rem;
+        padding-bottom: 10px;
+      }
+
+      .socialSites {
+        display: flex;
+        a {
+          background-color: #f3f3f3;
+          width: 40px;
+          height: 40px;
+          border-radius: 50%;
+          border: none;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          margin-right: 10px;
+        }
+      }
+    }
+
+    div {
+      .title {
+        font-weight: 500;
+        font-size: 1.1rem;
+        padding-bottom: 1.25rem;
+      }
+      ul > li {
+        font-weight: 300;
+        font-size: 1rem;
+        padding-bottom: 10px;
+      }
+    }
+  }
+
+  .copyrigthSection {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1.25rem 0;
+    .copyright {
+      font-weight: 400;
+      font-size: 0.8rem;
+    }
+  }
+}
+@media screen and (max-width: 1024px) {
+  #footer {
+    margin-top: 3.5rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  #footer {
+    .footerContainer {
+      flex-direction: column;
+
+      .footerAbout {
+        .aboutus {
+          br {
+            display: none;
+          }
+        }
+      }
+
+      div {
+        padding-bottom: 1.25rem;
+        .title {
+          padding-bottom: 0.8rem;
+        }
+      }
+    }
+  }
+}

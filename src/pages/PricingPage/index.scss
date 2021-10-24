@@ -1,0 +1,96 @@
+@use '../../App.scss' as colors;
+
+#pricing {
+  min-height: 115vh;
+  position: relative;
+  display: flex;
+  align-items: center;
+  .blackBg {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 56%;
+    background-color: colors.$black;
+    z-index: -1;
+  }
+  .pricingContent {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    color: colors.$primary;
+
+    .subTitle {
+      font-weight: 400;
+      font-size: 0.8rem;
+      padding-bottom: 10px;
+      text-transform: uppercase;
+    }
+
+    .title {
+      font-weight: 600;
+      font-size: 2.5rem;
+      line-height: 3.7rem;
+      padding-bottom: 1.8rem;
+    }
+
+    .packageContainer {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+  }
+}
+
+@media screen and (min-width: 1920px) {
+  #pricing {
+    min-height: 75vh;
+  }
+}
+
+@media screen and (max-width: 1536px) {
+  #pricing {
+    min-height: 120vh;
+  }
+}
+
+@media screen and (max-width: 1366px) {
+  #pricing {
+    min-height: 130vh;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  #pricing {
+    padding: 4rem 0;
+  }
+}
+@media screen and (max-width: 768px) {
+  #pricing {
+    .blackBg {
+      height: 50%;
+    }
+    .pricingContent {
+      .title {
+        br {
+          display: none;
+        }
+      }
+
+      .packageContainer {
+        flex-direction: column;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 425px) {
+  #pricing {
+    .pricingContent {
+      .title {
+        font-size: 2rem;
+      }
+    }
+  }
+}

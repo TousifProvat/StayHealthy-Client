@@ -1,0 +1,139 @@
+#about {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  .headingContainer {
+    text-align: center;
+    position: relative;
+    &::before {
+      content: '';
+      width: 70px;
+      height: 60px;
+      background-image: url('../../assets/icons/left-quote.png');
+      background-size: cover;
+      background-color: transparent;
+      position: absolute;
+      left: -128px;
+    }
+    &::after {
+      content: '';
+      width: 70px;
+      height: 60px;
+      background-image: url('../../assets/icons/left-quote.png');
+      background-size: cover;
+      background-color: transparent;
+      position: absolute;
+      right: -128px;
+      top: 0;
+      transform: scaleX(-1);
+    }
+    .subHeading {
+      font-weight: 400;
+      font-size: 0.8rem;
+      padding-bottom: 10px;
+    }
+
+    .heading {
+      font-weight: 600;
+      font-size: 2.5rem;
+      line-height: 3.7rem;
+      padding-bottom: 1.8rem;
+      text-transform: capitalize;
+    }
+  }
+
+  .testimonials {
+    display: flex;
+    padding-bottom: 3.1rem;
+    .middle {
+      border-left: 1px solid #d0d2d5;
+      border-right: 1px solid #d0d2d5;
+    }
+    .testimonialBox {
+      padding: 0 4.7rem;
+      text-align: center;
+
+      .count {
+        font-weight: 800;
+        font-size: 3rem;
+      }
+
+      .label {
+        font-weight: 400;
+        font-size: 1.1rem;
+      }
+    }
+  }
+
+  .menus {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 2rem;
+    row-gap: 2rem;
+  }
+}
+
+@media screen and (min-width: 1920px) {
+  #about {
+    min-height: 55vh;
+  }
+}
+
+@media screen and (max-width: 1366px) {
+  #about {
+    min-height: 110vh;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  #about {
+    padding: 4rem 0;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  #about {
+    min-height: auto;
+    .menus {
+      grid-template-columns: 1fr;
+    }
+    .testimonials {
+      .testimonialBox {
+        padding: 0 2rem;
+
+        .label {
+          font-size: 0.9rem;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 425px) {
+  #about {
+    padding: 2rem 0;
+    .headingContainer {
+      .heading {
+        font-size: 2rem;
+        br {
+          display: none;
+        }
+      }
+    }
+
+    .testimonials {
+      .testimonialBox {
+        padding: 0 1rem;
+        .count {
+          font-size: 1.5rem;
+        }
+        .label {
+          font-size: 0.8rem;
+        }
+      }
+    }
+  }
+}

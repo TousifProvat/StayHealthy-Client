@@ -1,0 +1,68 @@
+#program {
+  min-height: 100vh;
+  padding-bottom: 6.25rem;
+
+  .videoSection {
+    height: 600px;
+    background-color: grey;
+    margin: 2.1rem 0;
+    border-radius: 10px;
+    overflow: hidden;
+    cursor: pointer;
+    img {
+      width: 100%;
+    }
+  }
+  .programSection {
+    text-align: center;
+    .subHeading {
+      font-size: 0.88rem;
+      font-weight: 400;
+      text-transform: uppercase;
+      padding-bottom: 10px;
+    }
+    .heading {
+      text-transform: capitalize;
+      font-size: 2.5rem;
+      font-weight: 600;
+      line-height: 150%;
+      padding-bottom: 1.9rem;
+    }
+  }
+}
+
+@media screen and (max-width: 1536px) {
+  #program {
+    padding-bottom: 8.25rem;
+  }
+}
+@media screen and (max-width: 1024px) {
+  #program {
+    .videoSection {
+      height: auto;
+    }
+  }
+}
+
+@media screen and (max-width: 425px) {
+  #program {
+    min-height: 100vh;
+    padding-bottom: 6.25rem;
+
+    .videoSection {
+      height: 200px;
+      img {
+        width: 100%;
+      }
+    }
+
+    .programSection {
+      .heading {
+        font-size: 1.5rem;
+        br {
+          display: none;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,148 @@
+@use '../../../App.scss' as colors;
+
+header {
+  width: 100%;
+  height: 210px;
+  display: flex;
+  z-index: 1000;
+  position: absolute;
+  transition: height 0.3s ease-in-out;
+}
+
+.stickyHeader {
+  position: fixed;
+  height: 100px;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  .logo {
+    font-weight: 700;
+    color: colors.$primary;
+    font-size: 1.5rem;
+  }
+
+  .navLinks {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 50%;
+    a {
+      color: colors.$white;
+      font-weight: 300;
+      font-size: 0.9rem;
+      cursor: pointer;
+    }
+
+    .active {
+      font-weight: 500;
+    }
+
+    .navbarBtns {
+      display: none;
+    }
+  }
+  .navbarBtns {
+    button {
+      padding: 0.83rem 2.3rem;
+      border-radius: 1.8rem;
+      font-size: 1.1rem;
+      border: none;
+      background-color: colors.$primary;
+      color: colors.$black;
+      font-weight: 500;
+      cursor: pointer;
+    }
+  }
+  .dumbellBtn {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 1366px) {
+  .navbar {
+    .navLinks {
+      width: 45%;
+    }
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  header {
+    height: 100px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  header {
+    height: 210px;
+  }
+}
+@media screen and (max-width: 425px) {
+  header {
+    padding-top: 0.5rem;
+    height: auto;
+    position: fixed;
+  }
+
+  .stickyHeader {
+    height: auto;
+  }
+
+  .navbar {
+    .logo {
+      font-size: 1.3rem;
+    }
+    .navLinksActive {
+      transform: translateX(0%) !important;
+    }
+    .navLinks {
+      padding: 1rem 0;
+      background-color: black;
+      flex-direction: column;
+      height: 300px;
+      border-radius: 10px 0px 0px 10px;
+      position: absolute;
+      top: 60px;
+      right: 0;
+      transform: translateX(115%);
+      transition: transform 0.3s ease-in-out;
+
+      .navbarBtns {
+        display: block;
+      }
+    }
+
+    .navbarBtns {
+      display: none;
+    }
+
+    .dumbellBtn {
+      display: block;
+      padding-right: 5px;
+      img {
+        width: 35px;
+        transform: rotate(45deg);
+        &:nth-child(1) {
+          margin-bottom: -15px;
+        }
+        transition: transform 0.3s ease-in-out;
+      }
+    }
+
+    .dumbellBtn-active {
+      img {
+        &:nth-child(1) {
+          transform: rotate(90deg) translateX(5px);
+        }
+        &:nth-child(2) {
+          transform: rotate(0deg) translateY(-15px);
+        }
+      }
+    }
+  }
+}

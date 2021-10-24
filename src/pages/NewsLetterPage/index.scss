@@ -1,0 +1,152 @@
+@use '../../App.scss' as colors;
+
+#newsletter {
+  min-height: 60vh;
+  display: flex;
+  align-items: center;
+
+  .newsletterContent {
+    display: flex;
+    justify-content: space-between;
+    background-color: colors.$black;
+    width: 100%;
+    padding: 4.6rem 3.1rem;
+    border: none;
+    border-radius: 1.25rem;
+    .formSection {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      .heading {
+        font-weight: 600;
+        font-size: 2.5rem;
+        color: colors.$white;
+        line-height: 3.3rem;
+        padding-bottom: 1.8rem;
+      }
+      .newsletterForm {
+        .emailField {
+          width: 283px;
+          border: 1px solid colors.$white;
+          font-size: 1rem;
+          color: colors.$white;
+          background-color: transparent;
+          margin-right: 1.8rem;
+          border-radius: 2.1rem;
+          padding: 1.1rem 1.5rem;
+          outline: none;
+          &::placeholder {
+            color: colors.$white;
+            font-size: 1rem;
+            font-weight: 400;
+          }
+
+          &:focus {
+            border: 1px solid colors.$primary;
+          }
+        }
+        .submitBtn {
+          padding: 1.1rem 2.4rem;
+          border-radius: 1.7rem;
+          border: none;
+          background-color: colors.$primary;
+          color: colors.$black;
+          font-size: 1.1rem;
+          font-weight: 500;
+        }
+      }
+    }
+
+    .visuals {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-gap: 10px;
+
+      img {
+        border-radius: 8px;
+        border: none;
+      }
+
+      .firstCol {
+        margin-bottom: -1.5rem;
+      }
+
+      .secondCol {
+        margin-top: -1.5rem;
+      }
+
+      .col1 {
+        margin-bottom: 10px;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 1920px) {
+  #newsletter {
+    min-height: 40vh;
+  }
+}
+@media screen and (max-width: 1024px) {
+  #newsletter {
+    .newsletterContent {
+      .formSection {
+        .heading {
+          font-size: 2rem;
+          br {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  #newsletter {
+    min-height: auto;
+    .newsletterContent {
+      .formSection {
+        .heading {
+          br {
+            display: block;
+          }
+        }
+      }
+      padding: 2rem 1.8rem;
+      .visuals {
+        display: none;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 425px) {
+  #newsletter {
+    .newsletterContent {
+      flex-direction: column;
+      padding: 2rem 1.8rem;
+
+      .formSection {
+        .heading {
+          font-size: 2rem;
+          br {
+            display: none;
+          }
+        }
+
+        .newsletterForm {
+          .emailField {
+            width: 100%;
+            margin-right: 0;
+            margin-bottom: 1rem;
+          }
+        }
+      }
+
+      .visuals {
+        display: none;
+      }
+    }
+  }
+}

@@ -1,0 +1,49 @@
+.card {
+  padding: 0 1rem;
+  text-align: left;
+  .cardImage {
+    border-radius: 10px;
+    overflow: hidden;
+    margin-bottom: 1.2rem;
+    img {
+      width: 100%;
+    }
+  }
+  .cardTitle {
+    font-weight: 500;
+    font-size: 1.9;
+    color: #222;
+  }
+
+  .author {
+    font-weight: 400;
+    font-size: 14px;
+    color: #222;
+    padding-bottom: 10px;
+  }
+  .details {
+    font-weight: 300;
+    font-size: 14px;
+    color: #4b4b4b;
+    padding-bottom: 1.2rem;
+  }
+
+  .moreDetailsBtn {
+    font-weight: 400;
+    font-size: 14px;
+    color: #4472e8;
+    display: inline-flex;
+    align-items: center;
+    cursor: pointer;
+    svg {
+      margin-left: 0.8rem;
+    }
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .card {
+    padding: 0 2rem;
+    text-align: left;
+  }
+}
